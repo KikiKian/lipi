@@ -1,4 +1,4 @@
-module guju-pinyin
+module lipi
 
 go 1.26.1
 

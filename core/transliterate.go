@@ -1,6 +1,5 @@
 package core
 import "strings"
-import "fmt"
 
 
 var Mapping map[string]string
@@ -49,8 +48,7 @@ func init() {
 
     // matras
     matras := strings.Fields(`ા િ ી ુ ૂ ે ૈ ો ૌ`)
-    fmt.Println("matra count:", len(matras))
-    matraRoman := strings.Fields(`aa i ii u uu e ai o au`)
+    matraRoman := strings.Fields(`aa ii i u uu e ai o au`)
     for i, r := range matraRoman {
         Mapping["`"+r] = matras[i]
     }

@@ -82,17 +82,17 @@ Type phonetic English and get Gujarati characters instantly.
     - [ ] Benchmark parser performance
 
 - [ ] Web server (`server/`)
-  - [ ] Setup
-    - [ ] Create server/main.go
-    - [ ] net/http router setup
-    - [ ] Port configuration
-    - [ ] Graceful shutdown
-  - [ ] Endpoints
-    - [ ] POST /transliterate
-      - [ ] Parse request body
-      - [ ] Call core.Transliterate
-      - [ ] Return JSON response
-      - [ ] Handle empty input
+  - [x] Setup
+    - [x] Create server/main.go
+    - [x] net/http router setup
+    - [x] Port configuration
+    - [x] Graceful shutdown
+  - [x] Endpoints
+    - [x] POST /transliterate
+      - [x] Parse request body
+      - [x] Call core.Transliterate
+      - [x] Return JSON response
+      - [x] Handle empty input
       - [ ] Handle invalid UTF-8
     - [ ] GET / (serve frontend)
       - [ ] Embed static files with go:embed

@@ -2,7 +2,7 @@ package main
 
 import (
     "fmt"
-    "guju-pinyin/core"
+    "lipi/core"
 )
 
 func main() {
