@@ -7,13 +7,25 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <h1>Lipi</h1>
+    <p class="subtitle">Type phonetic English, get Gujarati script instantly.</p>
 
-    <textarea id="input" placeholder="Type phonetic text here..."></textarea>
+    <label for="input">Type here</label>
+    <textarea id="input" placeholder="e.g. k`em chh`o"></textarea>
 
+    <label style="margin-top:1.5rem;">Gujarati</label>
     <div id="output"></div>
 
+    <button class="copy-btn" onclick="copyOutput()">Copy</button>
+
+    <nav>
+        <a href="controls.html">Controls reference →</a>
+    </nav>
+
     <script src="main.js"></script>
+
+    <nav>
+        <a href="controls.html">Controls reference →</a>
+    </nav>
 </body>
 </html>

@@ -9,3 +9,8 @@ inputElement.addEventListener('input', (event) => {
         document.getElementById("output").innerHTML = text;
     })
 });
+
+function copyOutput() {
+    const text = document.getElementById('output').innerText;
+    navigator.clipboard.writeText(text);
+}
