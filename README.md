@@ -94,10 +94,10 @@ Type phonetic English and get Gujarati characters instantly.
       - [x] Return JSON response
       - [x] Handle empty input
       - [ ] Handle invalid UTF-8
-    - [ ] GET / (serve frontend)
-      - [ ] Embed static files with go:embed
-      - [ ] Serve index.html
-      - [ ] Serve CSS and JS
+    - [x] GET / (serve frontend)
+      - [x] Embed static files with go:embed
+      - [x] Serve index.html
+      - [x] Serve CSS and JS
   - [ ] Middleware
     - [ ] CORS headers
     - [ ] Rate limiting
@@ -108,25 +108,25 @@ Type phonetic English and get Gujarati characters instantly.
     - [ ] Integration tests
     - [ ] Load testing
 
-- [ ] Web frontend (`web/`)
-  - [ ] Setup
-    - [ ] Create web/index.html
-    - [ ] Create web/style.css
-    - [ ] Create web/main.js
-  - [ ] Input
-    - [ ] Live input text box
-    - [ ] Debounce API calls
+- [x] Web frontend (`web/`)
+  - [x] Setup
+    - [x] Create web/index.html
+    - [x] Create web/style.css
+    - [x] Create web/main.js
+  - [x] Input
+    - [x] Live input text box
+    - [] Debounce API calls
     - [ ] Keyboard shortcut hints
     - [ ] Placeholder text with example
   - [ ] Output
-    - [ ] Live Gujarati output display
-    - [ ] Large readable font
-    - [ ] Copy to clipboard button
+    - [x] Live Gujarati output display
+    - [x] Large readable font
+    - [x] Copy to clipboard button
     - [ ] Character count display
   - [ ] Controls reference panel
-    - [ ] Vowel table
-    - [ ] Consonant table
-    - [ ] Matra table
+    - [x] Vowel table
+    - [x] Consonant table
+    - [x] Mathra table
     - [ ] Collapsible panel
     - [ ] Search/filter controls
   - [ ] Design
@@ -171,11 +171,11 @@ Type phonetic English and get Gujarati characters instantly.
     - [ ] Download and install updates
     - [ ] Release notes display
 
-- [ ] Docker (`docker/`)
-  - [ ] Production image
-    - [ ] Create Dockerfile
-    - [ ] Multi-stage build
-    - [ ] Minimize image size
+- [x] Docker (`docker/`)
+  - [x] Production image
+    - [x] Create Dockerfile
+    - [x] Multi-stage build
+    - [x] Minimize image size
     - [ ] Non-root user setup
     - [ ] Health check endpoint
   - [ ] Build environment
