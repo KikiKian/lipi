@@ -1,6 +1,8 @@
 # Lipi
 Lipi is a Gujarathi phonetic system that converts english text into Gujarathi.
 
+![Lipi](docs/screenshot.png)
+
 # What is Gujarathi? And why is Lipi important?
 Gujarathi is my mother-tongue language of the humble state of Gujurath in India. For me Lipi is a way for me to more effectively communicate to familiy in Gujarathi. 
 
