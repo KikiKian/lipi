@@ -13,7 +13,7 @@ import (
 	//"net/http/httputil"
 )
 
-//go:embed web
+//go:embed server/web
 var webFiles embed.FS
 
 func handleTransliterate(w http.ResponseWriter, r *http.Request) {
