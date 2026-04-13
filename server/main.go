@@ -13,7 +13,7 @@ import (
 	//"net/http/httputil"
 )
 
-//go:embed server/web
+//go:embed web
 var webFiles embed.FS
 
 func handleTransliterate(w http.ResponseWriter, r *http.Request) {
@@ -44,7 +44,7 @@ func main() {
 	//graceful shutdown
 	quit := make(chan os.Signal, 1)
 	signal.Notify(quit, os.Interrupt)
-	subFS, _ := fs.Sub(webFiles, "server/web")
+	subFS, _ := fs.Sub(webFiles, "web")
 	http.Handle("/", http.FileServer(http.FS(subFS)))
 	go srv.ListenAndServe()
 	<-quit
