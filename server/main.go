@@ -4,11 +4,17 @@ import (
     "net/http"
 	"fmt"
 	"io"
+	"io/fs"
 	"lipi/core"
 	"os"
 	"os/signal"
 	"context"
+	"embed"
+	//"net/http/httputil"
 )
+
+//go:embed web
+var webFiles embed.FS
 
 func handleTransliterate(w http.ResponseWriter, r *http.Request) {
     // read body
@@ -35,6 +41,9 @@ func main() {
 	quit := make(chan os.Signal, 1)
 	signal.Notify(quit, os.Interrupt)
 
+
+	subFS, _ := fs.Sub(webFiles, "web")
+	http.Handle("/", http.FileServer(http.FS(subFS)))
 	go srv.ListenAndServe()
 
 	<-quit  
