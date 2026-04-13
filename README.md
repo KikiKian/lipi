@@ -1,8 +1,8 @@
 # Lipi
-Lipi is a gujurathi phonetic system that converts english text into gujurathi.
+Lipi is a Gujarathi phonetic system that converts english text into Gujarathi.
 
-# What is Gujurathi? And why is Lipi important?
-Gujurathi is my mother-tongue language of the humble state of Gujurath in India. For me Lipi is a way for me to more effectively communicate to familiy in Gujurathi. 
+# What is Gujarathi? And why is Lipi important?
+Gujarathi is my mother-tongue language of the humble state of Gujurath in India. For me Lipi is a way for me to more effectively communicate to familiy in Gujarathi. 
 
 # Controls
 See [CONTROLS.md](CONTROLS.md) for the full mapping reference.
