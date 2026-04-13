@@ -44,7 +44,7 @@ func main() {
 	//graceful shutdown
 	quit := make(chan os.Signal, 1)
 	signal.Notify(quit, os.Interrupt)
-	subFS, _ := fs.Sub(webFiles, "web")
+	subFS, _ := fs.Sub(webFiles, "server/web")
 	http.Handle("/", http.FileServer(http.FS(subFS)))
 	go srv.ListenAndServe()
 	<-quit
