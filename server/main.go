@@ -34,20 +34,20 @@ func handleTransliterate(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	http.HandleFunc("/transliterate", handleTransliterate)
-	srv := &http.Server{Addr: ":8080"}
-    fmt.Println("Server running on port 8080")
-
+	// get port from environment variable
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+	}
+	srv := &http.Server{Addr: ":" + port}
+	fmt.Println("Server running on port " + port)
 	//graceful shutdown
 	quit := make(chan os.Signal, 1)
 	signal.Notify(quit, os.Interrupt)
-
-
 	subFS, _ := fs.Sub(webFiles, "web")
 	http.Handle("/", http.FileServer(http.FS(subFS)))
 	go srv.ListenAndServe()
-
-	<-quit  
-
+	<-quit
 	fmt.Println("Shutting down...")
 	srv.Shutdown(context.Background())
 	fmt.Println("Done!")
