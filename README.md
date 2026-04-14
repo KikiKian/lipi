@@ -1,43 +1,19 @@
 # Lipi
 Lipi is a Gujarathi phonetic system that converts english text into Gujarathi.
 
-![Lipi](docs/screenshot.png)
+## Live Demo
+[lipi.up.railway.app](https://lipi.up.railway.app)
 
-# What is Gujarathi? And why is Lipi important?
-Gujarathi is my mother-tongue language of the humble state of Gujurath in India. For me Lipi is a way for me to more effectively communicate to familiy in Gujarathi. 
-
-# Controls
+## Controls
 See [CONTROLS.md](CONTROLS.md) for the full mapping reference.
 
-Type phonetic English and get Gujarati characters instantly.
-
-## Vowels
-| Type | Gujarati |
-|------|----------|
-| a    | અ        |
-| aa   | આ        |
-| i    | ઇ        |
-| ii   | ઈ        |
-| u    | ઉ        |
-| uu   | ઊ        |
-| e    | એ        |
-| ai   | ઐ        |
-| o    | ઓ        |
-| au   | ઔ        |
-
-## Consonant + Vowel (use backtick)
-| Type  | Gujarati |
-|-------|----------|
-| k`ii  | કી       |
-| kh`e  | ખે       |
-| g`o   | ગો       |
-
-## Example
-| Type        | Gujarati |
-|-------------|----------|
+## Quick Example
+| Type         | Gujarati |
+|--------------|----------|
 | k`em chh`o   | કેમ છો   |
 
-# Tickets
+## Tickets
+
 - [x] Core translation engine (`core/`)
   - [x] Vowel mapping
     - [x] Short vowels (a, i, u)
@@ -83,7 +59,7 @@ Type phonetic English and get Gujarati characters instantly.
     - [ ] Unit test edge cases
     - [ ] Benchmark parser performance
 
-- [ ] Web server (`server/`)
+- [x] Web server (`server/`)
   - [x] Setup
     - [x] Create server/main.go
     - [x] net/http router setup
@@ -93,13 +69,14 @@ Type phonetic English and get Gujarati characters instantly.
     - [x] POST /transliterate
       - [x] Parse request body
       - [x] Call core.Transliterate
-      - [x] Return JSON response
+      - [x] Return response
       - [x] Handle empty input
       - [ ] Handle invalid UTF-8
     - [x] GET / (serve frontend)
       - [x] Embed static files with go:embed
       - [x] Serve index.html
       - [x] Serve CSS and JS
+      - [x] Serve controls.html
   - [ ] Middleware
     - [ ] CORS headers
     - [ ] Rate limiting
@@ -117,18 +94,18 @@ Type phonetic English and get Gujarati characters instantly.
     - [x] Create web/main.js
   - [x] Input
     - [x] Live input text box
-    - [] Debounce API calls
+    - [ ] Debounce API calls
     - [ ] Keyboard shortcut hints
-    - [ ] Placeholder text with example
-  - [ ] Output
+    - [x] Placeholder text with example
+  - [x] Output
     - [x] Live Gujarati output display
     - [x] Large readable font
     - [x] Copy to clipboard button
     - [ ] Character count display
-  - [ ] Controls reference panel
+  - [x] Controls reference panel
     - [x] Vowel table
     - [x] Consonant table
-    - [x] Mathra table
+    - [x] Matra table
     - [ ] Collapsible panel
     - [ ] Search/filter controls
   - [ ] Design
@@ -173,7 +150,7 @@ Type phonetic English and get Gujarati characters instantly.
     - [ ] Download and install updates
     - [ ] Release notes display
 
-- [x] Docker (`docker/`)
+- [x] Docker
   - [x] Production image
     - [x] Create Dockerfile
     - [x] Multi-stage build
@@ -211,12 +188,13 @@ Type phonetic English and get Gujarati characters instantly.
   - [ ] README.md
     - [x] Title and description
     - [x] Why Lipi section
+    - [x] Live demo link
     - [ ] Installation instructions
     - [ ] Quick start example
     - [ ] Screenshot or demo gif
-    - [ ] Link to CONTROLS.md
+    - [x] Link to CONTROLS.md
     - [ ] Link to CONTRIBUTING.md
-  - [ ] CONTROLS.md
+  - [x] CONTROLS.md
     - [x] Vowel table
     - [x] Consonant table
     - [x] Matra table
