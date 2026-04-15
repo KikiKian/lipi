@@ -1,5 +1,5 @@
 # Lipi
-![Latest Release](https://img.shields.io/github/v/release/KikiKian/lipi)
+[![Latest Release](https://img.shields.io/github/v/release/KikiKian/lipi)](https://github.com/KikiKian/lipi/releases/latest)
 
 Lipi is a Gujarathi phonetic system that converts english text into Gujarathi. Basically, you type english sounds and it turns it into Gujurati.
 
