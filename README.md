@@ -1,5 +1,14 @@
 # Lipi
 [![Latest Release](https://img.shields.io/github/v/release/KikiKian/lipi)](https://github.com/KikiKian/lipi/releases/latest)
+[![Go](https://img.shields.io/badge/Go-1.23-00ADD8?logo=go)](https://go.dev)
+[![Built with Wails](https://img.shields.io/badge/desktop-Wails-red?logo=go)](https://wails.io)
+[![Platform](https://img.shields.io/badge/platform-Linux%20%7C%20macOS%20%7C%20Windows-lightgrey)](https://github.com/KikiKian/lipi/releases/latest)
+[![Stars](https://img.shields.io/github/stars/KikiKian/lipi?style=flat)](https://github.com/KikiKian/lipi/stargazers)
+[![Last Commit](https://img.shields.io/github/last-commit/KikiKian/lipi)](https://github.com/KikiKian/lipi/commits/main)
+[![Website](https://img.shields.io/badge/website-lipi.up.railway.app-blue)](https://lipi.up.railway.app)
+![Maintainer](https://img.shields.io/badge/maintainer-@KikiKian-blue)
+
+
 
 Lipi is a Gujarathi phonetic system that converts english text into Gujarathi. Basically, you type english sounds and it turns it into Gujurati.
 
@@ -28,6 +37,18 @@ See [CONTROLS.md](CONTROLS.md) for the full mapping reference.
 |----------------|----------|
 | `k'em chh'o`   | કેમ છો   |
 | `p-r'em`       | પ્રેમ    |
+
+## Installation
+
+Download the latest release for your platform from the [releases page](https://github.com/KikiKian/lipi/releases/latest).
+
+| Platform | File | Notes |
+|----------|------|-------|
+| Linux | `Lipi-Linux-x86_64` | Run `chmod +x Lipi-Linux-x86_64 && ./Lipi-Linux-x86_64` |
+| macOS | `Lipi-macOS-Universal.zip` | Unzip, then right-click the app and select Open |
+| Windows | `Lipi-Windows-x86_64.exe` | Double-click to run |
+
+> **macOS note:** Since the app isn't signed, macOS will block it on first launch. Right-click the `.app` and choose **Open** to bypass the warning.
 
 ## Tickets
 
