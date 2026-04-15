@@ -1,38 +1,32 @@
-package core
-import "strings"
+package main
 
+import "strings"
 
 var Mapping map[string]string
 
 func Transliterate(input string) string {
-    var out strings.Builder
-    i := 0
-    for i < len(input) {
+	var out strings.Builder
+	i := 0
+	for i < len(input) {
 		matched := false
-        for length := 3; length >= 1; length-- {
-		
+		for length := 3; length >= 1; length-- {
 			if i+length > len(input) {
 				continue
 			}
-
 			chunkText := input[i : i+length]
 			if val, ok := Mapping[chunkText]; ok {
-				//iterate over already matched chars
 				i += length
 				out.WriteString(val)
 				matched = true
 				break
 			}
 		}
-	if !matched {
-		// to evade asccii from input
-		out.WriteString(input[i:i+1])
-		i++
+		if !matched {
+			out.WriteString(input[i : i+1])
+			i++
+		}
 	}
-
-
-    }
-    return out.String()
+	return out.String()
 }
 
 

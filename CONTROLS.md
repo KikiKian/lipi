@@ -57,9 +57,9 @@
 ## Matras (consonant + backtick + vowel)
 | Type  | Gujarati |
 |-------|----------|
-| k\`aa  | કા       |
-| k\`i   | કિ       |
-| k\`ii  | કી       |
+| k\`a   | કા       |
+| k\`i   | કી       |
+| k\`ii  | કિ       |
 | k\`u   | કુ       |
 | k\`uu  | કૂ       |
 | k\`e   | કે       |

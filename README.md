@@ -10,7 +10,7 @@ See [CONTROLS.md](CONTROLS.md) for the full mapping reference.
 ## Quick Example
 | Type         | Gujarati |
 |--------------|----------|
-| k`em chh`o   | કેમ છો   |
+| ```k`em chh`o```   | કેમ છો   |
 
 ## Tickets
 
@@ -51,13 +51,13 @@ See [CONTROLS.md](CONTROLS.md) for the full mapping reference.
   - [ ] Numbers
     - [ ] Gujarati digit mapping (૦-૯)
     - [ ] Auto convert or manual trigger
-  - [ ] Tests
-    - [ ] Unit test each vowel
-    - [ ] Unit test each consonant
-    - [ ] Unit test each matra
-    - [ ] Unit test full sentences
-    - [ ] Unit test edge cases
-    - [ ] Benchmark parser performance
+  - [x] Tests
+    - [x] Unit test each vowel
+    - [x] Unit test each consonant
+    - [x] Unit test each matra
+    - [x] Unit test full sentences
+    - [x] Unit test edge cases
+    - [x] Benchmark parser performance
 
 - [x] Web server (`server/`)
   - [x] Setup
@@ -120,13 +120,13 @@ See [CONTROLS.md](CONTROLS.md) for the full mapping reference.
     - [ ] Social media meta tags
 
 - [ ] Desktop app (`desktop/`)
-  - [ ] Setup
-    - [ ] Install Wails
-    - [ ] Initialize Wails project
-    - [ ] Connect core engine to Wails
-    - [ ] Bind Transliterate function
+  - [x] Setup
+    - [x] Install Wails
+    - [x] Initialize Wails project
+    - [x] Connect core engine to Wails
+    - [x] Bind Transliterate function
   - [ ] UI
-    - [ ] Reuse web frontend
+    - [x] Reuse web frontend
     - [ ] Native window controls
     - [ ] App icon design
     - [ ] Splash screen
