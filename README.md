@@ -1,6 +1,10 @@
 # Lipi
 Lipi is a Gujarathi phonetic system that converts english text into Gujarathi. Basically, you type english sounds and it turns it into Gujurati.
 
+## Screenshot
+Lipi's [website](https://lipi.up.railway.app):
+![Lipi screenshot](docs/screenshot.png)
+
 ## Why Lipi
 
 I built Lipi because I wanted a faster way to message my family in Gujarati. The standard Gujarati keyboard is frustrating and led to me hunting for characters, switching layouts, losing though mid-sentence. I was getting by in English just to avoid the friction.
@@ -11,7 +15,7 @@ That thought led me to build "Lipi". I started looking into it, and eventually l
 
 Lipi is my attempt to make typing Gujarati feel as natural as typing English.
 
-## Live Demo
+## Lipi's Website
 [lipi.up.railway.app](https://lipi.up.railway.app)
 
 ## Controls
