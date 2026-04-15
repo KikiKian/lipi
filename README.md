@@ -124,6 +124,46 @@ See [CONTROLS.md](CONTROLS.md) for the full mapping reference.
     - [ ] Copy link button
     - [ ] Social media meta tags
 
+- [x] Mobile app (`mobile/`)
+  - [x] Setup
+    - [x] Initialize Expo project (expo-router)
+    - [x] Font loading (Inter via expo-google-fonts)
+    - [x] Splash screen
+    - [x] Navigation stack (index + controls screens)
+    - [x] Error boundary
+  - [x] Core engine
+    - [x] Port transliterate logic to TypeScript (`utils/transliterate.ts`)
+    - [x] Vowel mapping
+    - [x] Matra mapping
+    - [x] Consonant mapping
+    - [x] Longest match parser
+  - [x] Main screen (`app/index.tsx`)
+    - [x] Phonetic text input
+    - [x] Live Gujarati output
+    - [x] Copy to clipboard
+    - [x] Haptic feedback on copy
+    - [x] Link to controls reference screen
+  - [x] Controls reference screen (`app/controls.tsx`)
+    - [x] Vowel table
+    - [x] Matra table
+    - [x] Consonant table
+    - [x] Back navigation
+  - [x] Design
+    - [x] Dark mode
+  - [ ] Features
+    - [ ] Autocomplete mode (transliterate word on space)
+    - [ ] Share / copy link
+  - [ ] App icon & assets
+    - [ ] Design app icon
+    - [ ] Generate all icon sizes (iOS + Android)
+  - [ ] Tests
+    - [ ] Unit test transliterate util
+    - [ ] Component snapshot tests
+  - [ ] Publishing
+    - [ ] Configure EAS Build
+    - [ ] iOS App Store submission
+    - [ ] Android Play Store submission
+
 - [ ] Desktop app (`desktop/`)
   - [x] Setup
     - [x] Install Wails
