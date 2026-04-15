@@ -103,6 +103,24 @@ func TestMatras(t *testing.T) {
 	}
 }
 
+func TestSpecialChars(t *testing.T) {
+	cases := []struct {
+		in  string
+		out string
+	}{
+		{"'~", "ં"},
+		{"'H", "ઃ"},
+		{"'^", "ઁ"},
+		{"r'~g", "રંગ"},
+		{"a'~dr", "અંદર"},
+	}
+	for _, c := range cases {
+		if got := Transliterate(c.in); got != c.out {
+			t.Errorf("Transliterate(%q) = %q, want %q", c.in, got, c.out)
+		}
+	}
+}
+
 func TestConjuncts(t *testing.T) {
 	cases := []struct {
 		in  string
@@ -145,7 +163,7 @@ func TestEdgeCases(t *testing.T) {
 		out string
 	}{
 		{"", ""},
-		{"123", "123"},
+		{"123", "૧૨૩"},
 		{"!!!", "!!!"},
 		{"k k", "ક ક"},
 		{"ksh", "ક્ષ"},
@@ -160,7 +178,7 @@ func TestEdgeCases(t *testing.T) {
 }
 
 func BenchmarkParser(b *testing.B) {
-	input := "k`em chh`o n`aam r`aam k`al"
+	input := "k'em chh'o n'aam r'aam k'al"
 	for i := 0; i < b.N; i++ {
 		Transliterate(input)
 	}

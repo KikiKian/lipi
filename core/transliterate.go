@@ -54,13 +54,27 @@ func init() {
         Mapping["x"+r] = matras[i]
     }
 
-    // halant 
+    // halant
     Mapping["-"] = "્"
+
+    Mapping["'~"] = "ં"
+    Mapping["'H"] = "ઃ"
+    Mapping["'^"] = "ઁ"
 
     // consonants
     consonants := strings.Fields(`ક ખ ગ ઘ ઙ ચ છ જ ઝ ઞ ટ ઠ ડ ઢ ણ ત થ દ ધ ન પ ફ બ ભ મ ય ર લ વ શ ષ સ હ ળ ક્ષ જ્ઞ`)
     roman := strings.Fields(`k kh g gh ng ch chh j jh ny T Th D Dh N t th d dh n p ph b bh m y r l v sh Sh s h L ksh gny`)
+    
     for i, r := range roman {
         Mapping[r] = consonants[i]
     }
+
+    //numbers
+    numbers := strings.Fields(`૦ ૧ ૨ ૩ ૪ ૫ ૬ ૭ ૮ ૯`)
+    romanNumbers := strings.Fields(`0 1 2 3 4 5 6 7 8 9`)
+
+    for i, r := range romanNumbers {
+        Mapping[r] = numbers[i]
+    }
+
 }

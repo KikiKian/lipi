@@ -1,5 +1,15 @@
 # Lipi
-Lipi is a Gujarathi phonetic system that converts english text into Gujarathi.
+Lipi is a Gujarathi phonetic system that converts english text into Gujarathi. Basically, you type english sounds and it turns it into Gujurati.
+
+## Why Lipi
+
+I built Lipi because I wanted a faster way to message my family in Gujarati. The standard Gujarati keyboard is frustrating and led to me hunting for characters, switching layouts, losing though mid-sentence. I was getting by in English just to avoid the friction.
+
+Then I came across Pinyin, the phonetic input system used for Chinese. You just type how the word sounds in Roman letters and it figures out the characters.I couldn't understand why something like that didn't exist for Gujarati — or most other Indic scripts for that matter.
+
+That thought led me to build "Lipi". I started looking into it, and eventually landed on a word that felt right for the project: *lipi* (લિપિ) — which means *script* in Gujarati. 
+
+Lipi is my attempt to make typing Gujarati feel as natural as typing English.
 
 ## Live Demo
 [lipi.up.railway.app](https://lipi.up.railway.app)
@@ -14,6 +24,8 @@ See [CONTROLS.md](CONTROLS.md) for the full mapping reference.
 | `p-r'em`       | પ્રેમ    |
 
 ## Tickets
+
+### High Priority
 
 - [x] Core translation engine (`core/`)
   - [x] Vowel mapping
@@ -45,12 +57,12 @@ See [CONTROLS.md](CONTROLS.md) for the full mapping reference.
     - [x] Halant support (્)
     - [x] Parser support for conjuncts
     - [x] Add conjuncts to CONTROLS.md
-  - [ ] Extended characters
-    - [ ] Anusvara (ં)
-    - [ ] Visarga (ઃ)
-    - [ ] Chandrabindu (ઁ)
-  - [ ] Numbers
-    - [ ] Gujarati digit mapping (૦-૯)
+  - [x] Extended characters
+    - [x] Anusvara (ં)
+    - [x] Visarga (ઃ)
+    - [x] Chandrabindu (ઁ)
+  - [x] Numbers
+    - [x] Gujarati digit mapping (૦-૯)
     - [ ] Auto convert or manual trigger
   - [x] Tests
     - [x] Unit test each vowel
@@ -58,6 +70,8 @@ See [CONTROLS.md](CONTROLS.md) for the full mapping reference.
     - [x] Unit test each matra
     - [x] Unit test full sentences
     - [x] Unit test edge cases
+    - [x] Unit test conjuncts
+    - [x] Unit test special characters
     - [x] Benchmark parser performance
 
 - [x] Web server (`server/`)
@@ -86,7 +100,6 @@ See [CONTROLS.md](CONTROLS.md) for the full mapping reference.
   - [ ] Tests
     - [ ] Unit test each endpoint
     - [ ] Integration tests
-    - [ ] Load testing
 
 - [x] Web frontend (`web/`)
   - [x] Setup
@@ -96,34 +109,24 @@ See [CONTROLS.md](CONTROLS.md) for the full mapping reference.
   - [x] Input
     - [x] Live input text box
     - [ ] Debounce API calls
-    - [ ] Keyboard shortcut hints
     - [x] Placeholder text with example
   - [x] Output
     - [x] Live Gujarati output display
     - [x] Large readable font
     - [x] Copy to clipboard button
-    - [ ] Character count display
   - [x] Controls reference panel
     - [x] Vowel table
     - [x] Consonant table
     - [x] Matra table
-    - [ ] Collapsible panel
-    - [ ] Search/filter controls
   - [x] Autocomplete mode
     - [x] Toggle autocomplete on/off (button or keyboard shortcut)
     - [x] On spacebar, transliterate current word in-place
     - [x] Preserve cursor position after replacement
     - [x] Works in both web and desktop frontends
-  - [ ] Design
-    - [ ] Mobile responsive layout
-    - [ ] Dark mode toggle
-    - [ ] Font size controls
-    - [ ] Smooth transitions
   - [ ] Sharing
     - [ ] Shareable URL with encoded text
     - [ ] Share button
     - [ ] Copy link button
-    - [ ] Social media meta tags
 
 - [x] Mobile app (`mobile/`)
   - [x] Setup
@@ -154,9 +157,6 @@ See [CONTROLS.md](CONTROLS.md) for the full mapping reference.
   - [ ] Features
     - [ ] Autocomplete mode (transliterate word on space)
     - [ ] Share / copy link
-  - [ ] App icon & assets
-    - [ ] Design app icon
-    - [ ] Generate all icon sizes (iOS + Android)
   - [ ] Tests
     - [ ] Unit test transliterate util
     - [ ] Component snapshot tests
@@ -176,25 +176,32 @@ See [CONTROLS.md](CONTROLS.md) for the full mapping reference.
     - [ ] Native window controls
     - [ ] App icon design
     - [ ] Splash screen
-  - [ ] System integration
-    - [ ] System tray icon
-    - [ ] Global keyboard shortcut to open
-    - [ ] Minimize to tray
-    - [ ] Start on boot option
   - [ ] Windows build
     - [ ] Cross-compile from Linux
     - [ ] Windows installer (.exe)
-    - [ ] Code signing
     - [ ] Windows icon (.ico)
   - [ ] Linux build
     - [ ] .deb package
     - [ ] .AppImage package
-    - [ ] .rpm package
     - [ ] AUR package (Arch Linux)
-  - [ ] Auto updater
-    - [ ] Version checking
-    - [ ] Download and install updates
-    - [ ] Release notes display
+
+- [ ] Documentation
+  - [ ] README.md
+    - [x] Title and description
+    - [x] Live demo link
+    - [ ] Installation instructions
+    - [ ] Quick start example
+    - [ ] Screenshot or demo gif
+    - [x] Link to CONTROLS.md
+  - [x] CONTROLS.md
+    - [x] Vowel table
+    - [x] Consonant table
+    - [x] Matra table
+    - [x] Examples
+    - [x] Conjunct examples
+    - [ ] Number examples
+
+### Low Priority
 
 - [x] Docker
   - [x] Production image
@@ -230,23 +237,33 @@ See [CONTROLS.md](CONTROLS.md) for the full mapping reference.
       - [ ] Create GitHub release
       - [ ] Upload binaries to release
 
-- [ ] Documentation
-  - [ ] README.md
-    - [x] Title and description
-    - [x] Why Lipi section
-    - [x] Live demo link
-    - [ ] Installation instructions
-    - [ ] Quick start example
-    - [ ] Screenshot or demo gif
-    - [x] Link to CONTROLS.md
-    - [ ] Link to CONTRIBUTING.md
-  - [x] CONTROLS.md
-    - [x] Vowel table
-    - [x] Consonant table
-    - [x] Matra table
-    - [x] Examples
-    - [x] Conjunct examples
-    - [ ] Number examples
+- [ ] Desktop system integration
+  - [ ] System tray icon
+  - [ ] Global keyboard shortcut to open
+  - [ ] Minimize to tray
+  - [ ] Start on boot option
+  - [ ] Auto updater
+    - [ ] Version checking
+    - [ ] Download and install updates
+    - [ ] Release notes display
+  - [ ] Code signing (Windows)
+
+- [ ] Mobile app icon & assets
+  - [ ] Design app icon
+  - [ ] Generate all icon sizes (iOS + Android)
+
+- [ ] Web frontend polish
+  - [ ] Mobile responsive layout
+  - [ ] Dark mode toggle
+  - [ ] Font size controls
+  - [ ] Smooth transitions
+  - [ ] Keyboard shortcut hints
+  - [ ] Character count display
+  - [ ] Collapsible controls panel
+  - [ ] Search/filter controls
+  - [ ] Social media meta tags
+
+- [ ] Contributing & API docs
   - [ ] CONTRIBUTING.md
     - [ ] How to add new mappings
     - [ ] How to run tests
@@ -264,7 +281,6 @@ See [CONTROLS.md](CONTROLS.md) for the full mapping reference.
     - [ ] Mixed Gujarati/English input
     - [ ] Very long input handling
   - [ ] Performance
-    - [ ] Parser benchmarks
     - [ ] API response time targets
     - [ ] Frontend debounce tuning
   - [ ] Accessibility
@@ -272,3 +288,4 @@ See [CONTROLS.md](CONTROLS.md) for the full mapping reference.
     - [ ] Keyboard navigation
     - [ ] High contrast mode
     - [ ] Font size accessibility
+  - [ ] Server load testing

@@ -67,6 +67,13 @@
 | k'o / kxo    | કો       |
 | k'au / kxau  | કૌ       |
 
+## Special Diacritics
+| Type | Gujarati |
+|------|----------|
+| '~   | ં (anusvara) |
+| 'H   | ઃ (visarga)  |
+| '^   | ઁ (chandrabindu) |
+
 ## Conjunct Consonants (consonant + `-` + consonant)
 | Type    | Gujarati |
 |---------|----------|
