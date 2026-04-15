@@ -10,22 +10,22 @@
     <h1>Lipi</h1>
     <p class="subtitle">Type phonetic English, get Gujarati script instantly.</p>
 
+    <div class="toolbar">
+        <button class="toggle-btn" id="toggle-btn">Autocomplete: off</button>
+    </div>
+
     <label for="input">Type here</label>
     <textarea id="input" placeholder="e.g. k`em chh`o"></textarea>
 
-    <label style="margin-top:1.5rem;">Gujarati</label>
+    <label id="output-label" style="margin-top:1.5rem;">Gujarati</label>
     <div id="output"></div>
 
-    <button class="copy-btn" onclick="copyOutput()">Copy</button>
+    <button class="copy-btn" id="copy-btn" onclick="copyOutput()">Copy</button>
 
     <nav>
         <a href="controls.html">Controls reference →</a>
     </nav>
 
     <script src="main.js"></script>
-
-    <nav>
-        <a href="controls.html">Controls reference →</a>
-    </nav>
 </body>
 </html>

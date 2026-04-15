@@ -108,6 +108,11 @@ See [CONTROLS.md](CONTROLS.md) for the full mapping reference.
     - [x] Matra table
     - [ ] Collapsible panel
     - [ ] Search/filter controls
+  - [x] Autocomplete mode
+    - [x] Toggle autocomplete on/off (button or keyboard shortcut)
+    - [x] On spacebar, transliterate current word in-place
+    - [x] Preserve cursor position after replacement
+    - [x] Works in both web and desktop frontends
   - [ ] Design
     - [ ] Mobile responsive layout
     - [ ] Dark mode toggle

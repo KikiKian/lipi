@@ -61,6 +61,30 @@ textarea:focus {
     line-height: 1.6;
 }
 
+.toolbar {
+    margin-bottom: 1.5rem;
+}
+
+.toggle-btn {
+    background: transparent;
+    border: 1px solid #444;
+    border-radius: 6px;
+    color: #aaa;
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.toggle-btn:hover {
+    background: #2a2a2a;
+    color: #f0f0f0;
+}
+
+.toggle-btn.active {
+    border-color: #888;
+    color: #f0f0f0;
+}
+
 .copy-btn {
     margin-top: 1rem;
     background: transparent;
