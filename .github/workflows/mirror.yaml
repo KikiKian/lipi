@@ -10,5 +10,5 @@ jobs:
         with:
           fetch-depth: 0
       - run: |
-          git remote add codeberg https://oauth2:${{ secrets.CODEBERG }}@codeberg.org/i-am-kiki/lipi.git
+          git remote add codeberg https://oauth2:${{ secrets.CODEBERG}}@codeberg.org/i-am-kiki/lipi.git
           git push codeberg main --force
