@@ -54,22 +54,32 @@
 | ksh  | ક્ષ      |
 | gny  | જ્ઞ      |
 
-## Matras (consonant + backtick + vowel)
-| Type  | Gujarati |
-|-------|----------|
-| k\`a   | કા       |
-| k\`i   | કી       |
-| k\`ii  | કિ       |
-| k\`u   | કુ       |
-| k\`uu  | કૂ       |
-| k\`e   | કે       |
-| k\`ai  | કૈ       |
-| k\`o   | કો       |
-| k\`au  | કૌ       |
-
-## Examples
+## Matras (consonant + `'` or `x` + vowel)
 | Type         | Gujarati |
 |--------------|----------|
-| `em chh\`o   | કેમ છો   |
-| n\`am        | નામ      |
-| g\`am        | ગામ      |
+| k'a / kxa    | કા       |
+| k'i / kxi    | કિ       |
+| k'ii / kxii  | કી       |
+| k'u / kxu    | કુ       |
+| k'uu / kxuu  | કૂ       |
+| k'e / kxe    | કે       |
+| k'ai / kxai  | કૈ       |
+| k'o / kxo    | કો       |
+| k'au / kxau  | કૌ       |
+
+## Conjunct Consonants (consonant + `-` + consonant)
+| Type    | Gujarati |
+|---------|----------|
+| k-t     | ક્ત      |
+| p-r     | પ્ર      |
+| s-t     | સ્ત      |
+| n-d     | ન્દ      |
+| s-t-r   | સ્ત્ર    |
+| p-r'em  | પ્રેમ    |
+
+## Examples
+| Type          | Gujarati |
+|---------------|----------|
+| k'em chh'o    | કેમ છો   |
+| n'am          | નામ      |
+| g'am          | ગામ      |

@@ -8,9 +8,10 @@ Lipi is a Gujarathi phonetic system that converts english text into Gujarathi.
 See [CONTROLS.md](CONTROLS.md) for the full mapping reference.
 
 ## Quick Example
-| Type         | Gujarati |
-|--------------|----------|
-| ```k`em chh`o```   | કેમ છો   |
+| Type           | Gujarati |
+|----------------|----------|
+| `k'em chh'o`   | કેમ છો   |
+| `p-r'em`       | પ્રેમ    |
 
 ## Tickets
 
@@ -29,7 +30,7 @@ See [CONTROLS.md](CONTROLS.md) for the full mapping reference.
     - [x] Sibilants (sh, Sh, s)
     - [x] Aspirate (h)
     - [x] Special (L, ksh, gny)
-  - [x] Matra support (backtick system)
+  - [x] Matra support (`'` or `x` prefix)
     - [x] Short matras (i, u)
     - [x] Long matras (aa, ii, uu)
     - [x] Complex matras (e, ai, o, au)
@@ -38,12 +39,12 @@ See [CONTROLS.md](CONTROLS.md) for the full mapping reference.
     - [x] Length 2 matching
     - [x] Length 1 matching
     - [x] Fallback passthrough
-  - [ ] Conjunct consonants
-    - [ ] Design conjunct syntax
-    - [ ] Common conjuncts (ક્ત, સ્ત, ન્ત)
-    - [ ] Halant support (્)
-    - [ ] Parser support for conjuncts
-    - [ ] Add conjuncts to CONTROLS.md
+  - [x] Conjunct consonants
+    - [x] Design conjunct syntax (`-` as halant connector)
+    - [x] Common conjuncts (ક્ત, સ્ત, ન્ત)
+    - [x] Halant support (્)
+    - [x] Parser support for conjuncts
+    - [x] Add conjuncts to CONTROLS.md
   - [ ] Extended characters
     - [ ] Anusvara (ં)
     - [ ] Visarga (ઃ)
@@ -244,7 +245,7 @@ See [CONTROLS.md](CONTROLS.md) for the full mapping reference.
     - [x] Consonant table
     - [x] Matra table
     - [x] Examples
-    - [ ] Conjunct examples
+    - [x] Conjunct examples
     - [ ] Number examples
   - [ ] CONTRIBUTING.md
     - [ ] How to add new mappings

@@ -81,15 +81,39 @@ func TestMatras(t *testing.T) {
 		in  string
 		out string
 	}{
-		{"k`a", "કા"},
-		{"k`i", "કી"},
-		{"k`ii", "કિ"},
-		{"k`u", "કુ"},
-		{"k`uu", "કૂ"},
-		{"k`e", "કે"},
-		{"k`ai", "કૈ"},
-		{"k`o", "કો"},
-		{"k`au", "કૌ"},
+		// apostrophe prefix
+		{"k'a", "કા"},
+		{"k'i", "કી"},
+		{"k'ii", "કિ"},
+		{"k'u", "કુ"},
+		{"k'uu", "કૂ"},
+		{"k'e", "કે"},
+		{"k'ai", "કૈ"},
+		{"k'o", "કો"},
+		{"k'au", "કૌ"},
+		// x prefix
+		{"kxa", "કા"},
+		{"kxe", "કે"},
+		{"kxai", "કૈ"},
+	}
+	for _, c := range cases {
+		if got := Transliterate(c.in); got != c.out {
+			t.Errorf("Transliterate(%q) = %q, want %q", c.in, got, c.out)
+		}
+	}
+}
+
+func TestConjuncts(t *testing.T) {
+	cases := []struct {
+		in  string
+		out string
+	}{
+		{"k-t", "ક્ત"},
+		{"p-r", "પ્ર"},
+		{"s-t", "સ્ત"},
+		{"n-d", "ન્દ"},
+		{"s-t-r", "સ્ત્ર"},
+		{"p-r'em", "પ્રેમ"},
 	}
 	for _, c := range cases {
 		if got := Transliterate(c.in); got != c.out {
@@ -103,10 +127,10 @@ func TestSentences(t *testing.T) {
 		in  string
 		out string
 	}{
-		{"k`em chh`o", "કેમ છો"},
-		{"n`am", "નામ"},
-		{"r`am", "રામ"},
-		{"k`al", "કાલ"},
+		{"k'em chh'o", "કેમ છો"},
+		{"n'am", "નામ"},
+		{"r'am", "રામ"},
+		{"k'al", "કાલ"},
 	}
 	for _, c := range cases {
 		if got := Transliterate(c.in); got != c.out {

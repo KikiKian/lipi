@@ -7,7 +7,14 @@ function buildMapping() {
 
   const matras = 'ા િ ી ુ ૂ ે ૈ ો ૌ'.split(' ');
   const matraRoman = 'a i ii u uu e ai o au'.split(' ');
-  matraRoman.forEach((r, i) => { mapping['`' + r] = matras[i]; });
+  // ' or x as matra prefix (e.g. k'a or kxa → કા)
+  matraRoman.forEach((r, i) => {
+    mapping["'" + r] = matras[i];
+    mapping['x' + r] = matras[i];
+  });
+
+  // halant / conjunct connector (e.g. k-t → ક્ત)
+  mapping['-'] = '્';
 
   const consonants = 'ક ખ ગ ઘ ઙ ચ છ જ ઝ ઞ ટ ઠ ડ ઢ ણ ત થ દ ધ ન પ ફ બ ભ મ ય ર લ વ શ ષ સ હ ળ ક્ષ જ્ઞ'.split(' ');
   const roman = 'k kh g gh ng ch chh j jh ny T Th D Dh N t th d dh n p ph b bh m y r l v sh Sh s h L ksh gny'.split(' ');

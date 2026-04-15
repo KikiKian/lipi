@@ -40,12 +40,16 @@ func init() {
         Mapping[r] = vowels[i]
     }
 
-    // matras
+    // matras — ' or x as prefix (e.g. k'a or kxa → કા)
     matras := strings.Fields(`ા િ ી ુ ૂ ે ૈ ો ૌ`)
     matraRoman := strings.Fields(`a ii i u uu e ai o au`)
     for i, r := range matraRoman {
-        Mapping["`"+r] = matras[i]
+        Mapping["'"+r] = matras[i]
+        Mapping["x"+r] = matras[i]
     }
+
+    // halant / conjunct connector (e.g. k-t → ક્ત)
+    Mapping["-"] = "્"
 
     // consonants
     consonants := strings.Fields(`ક ખ ગ ઘ ઙ ચ છ જ ઝ ઞ ટ ઠ ડ ઢ ણ ત થ દ ધ ન પ ફ બ ભ મ ય ર લ વ શ ષ સ હ ળ ક્ષ જ્ઞ`)
