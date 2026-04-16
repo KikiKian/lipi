@@ -90,7 +90,7 @@ Download the latest release for your platform from the [releases page](https://g
     - [x] Chandrabindu (ઁ)
   - [x] Numbers
     - [x] Gujarati digit mapping (૦-૯)
-    - [ ] Auto convert or manual trigger
+    - [x] Auto convert or manual trigger
   - [x] Tests
     - [x] Unit test each vowel
     - [x] Unit test each consonant
@@ -216,9 +216,10 @@ Download the latest release for your platform from the [releases page](https://g
   - [ ] README.md
     - [x] Title and description
     - [x] Live demo link
-    - [ ] Installation instructions
+    - [x] Installation instructions
     - [ ] Quick start example
-    - [ ] Screenshot or demo gif
+    - [x] Screenshot
+    - [ ] Demo gif
     - [x] Link to CONTROLS.md
   - [x] CONTROLS.md
     - [x] Vowel table
