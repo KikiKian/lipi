@@ -10,7 +10,7 @@
 
 
 
-Lipi is a Gujarathi phonetic system that converts english text into Gujarathi. Basically, you type english sounds and it turns it into Gujurati.
+Lipi is a Gujarathi phonetic system that converts english text into Gujarathi. Basically, you type English sounds and it turns it into Gujurati.
 
 ## Screenshot
 Lipi's [website](https://lipi.up.railway.app):
