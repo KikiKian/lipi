@@ -1,31 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lipi</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lipi</title>
+  <style>
+    /* paste your style.css contents here */
+  </style>
 </head>
 <body>
-    <h1>Lipi</h1>
-    <p class="subtitle">Type phonetic English, get Gujarati script instantly.</p>
+  <h1>Lipi</h1>
+  <p class="subtitle">Type phonetic English, get Gujarati script instantly.</p>
+  <div class="toolbar">
+    <button class="toggle-btn" id="toggle-btn">Autocomplete: off</button>
+  </div>
+  <label for="input">Type here</label>
+  <textarea id="input" placeholder="e.g. k`em chh`o"></textarea>
+  <label id="output-label" style="margin-top:1.5rem;">Gujarati</label>
+  <div id="output"></div>
+  <button class="copy-btn" id="copy-btn" onclick="copyOutput()">Copy</button>
+  <nav>
+    <a href="controls.html">Controls reference →</a>
+  </nav>
 
-    <div class="toolbar">
-        <button class="toggle-btn" id="toggle-btn">Autocomplete: off</button>
-    </div>
+  <script>
+    // --- Transliteration core ---
 
-    <label for="input">Type here</label>
-    <textarea id="input" placeholder="e.g. k`em chh`o"></textarea>
+    const mapping = {};
 
-    <label id="output-label" style="margin-top:1.5rem;">Gujarati</label>
-    <div id="output"></div>
+    const vowels     = "અ આ ઇ ઈ ઉ ઊ એ ઐ ઓ ઔ".split(" ");
+    const vowelRoman = "a aa i ii u uu e ai o au".split(" ");
+    vowelRoman.forEach((r, i) => (mapping[r] = vowels[i]));
 
-    <button class="copy-btn" id="copy-btn" onclick="copyOutput()">Copy</button>
+    const matras     = "ા િ ી ુ ૂ ે ૈ ો ૌ".split(" ");
+    const matraRoman = "a ii i u uu e ai o au".split(" ");
+    matraRoman.forEach((r, i) => {
+      mapping["'" + r] = matras[i];
+      mapping["x"  + r] = matras[i];
+    });
 
-    <nav>
-        <a href="controls.html">Controls reference →</a>
-    </nav>
+    mapping["-"]  = "્";
+    mapping["'~"] = "ં";
+    mapping["'H"] = "ઃ";
+    mapping["'^"] = "ઁ";
 
-    <script src="main.js"></script>
+    const consonants =
+      "ક ખ ગ ઘ ઙ ચ છ જ ઝ ઞ ટ ઠ ડ ઢ ણ ત થ દ ધ ન પ ફ બ ભ મ ય ર લ વ શ ષ સ હ ળ ક્ષ જ્ઞ".split(" ");
+    const roman =
+      "k kh g gh ng ch chh j jh ny T Th D Dh N t th d dh n p ph b bh m y r l v sh Sh s h L ksh gny".split(" ");
+    roman.forEach((r, i) => (mapping[r] = consonants[i]));
+
+    const numbers      = "૦ ૧ ૨ ૩ ૪ ૫ ૬ ૭ ૮ ૯".split(" ");
+    const romanNumbers = "0 1 2 3 4 5 6 7 8 9".split(" ");
+    romanNumbers.forEach((r, i) => (mapping[r] = numbers[i]));
+
+    function transliterate(text) {
+      let out = "";
+      let i = 0;
+      while (i < text.length) {
+        let matched = false;
+        for (let length = 3; length >= 1; length--) {
+          if (i + length > text.length) continue;
+          const chunk = text.slice(i, i + length);
+          if (mapping[chunk] !== undefined) {
+            out += mapping[chunk];
+            i += length;
+            matched = true;
+            break;
+          }
+        }
+        if (!matched) {
+          out += text[i];
+          i++;
+        }
+      }
+      return out;
+    }
+
+    // --- UI ---
+
+    const input       = document.getElementById('input');
+    const output      = document.getElementById('output');
+    const outputLabel = document.getElementById('output-label');
+    const copyBtn     = document.getElementById('copy-btn');
+    const toggleBtn   = document.getElementById('toggle-btn');
+    let autocomplete  = false;
+
+    toggleBtn.addEventListener('click', function () {
+      autocomplete = !autocomplete;
+      toggleBtn.textContent = autocomplete ? 'Autocomplete: on' : 'Autocomplete: off';
+      toggleBtn.classList.toggle('active', autocomplete);
+      output.style.display      = autocomplete ? 'none' : '';
+      outputLabel.style.display = autocomplete ? 'none' : '';
+    });
+
+    input.addEventListener('input', function () {
+      if (autocomplete) return;
+      output.innerHTML = transliterate(this.value);
+    });
+
+    input.addEventListener('keydown', function (e) {
+      if (!autocomplete || e.key !== ' ') return;
+      e.preventDefault();
+      const pos       = this.selectionStart;
+      const val       = this.value;
+      const wordStart = val.lastIndexOf(' ', pos - 1) + 1;
+      const word      = val.slice(wordStart, pos);
+      if (!word) {
+        this.value = val.slice(0, pos) + ' ' + val.slice(pos);
+        this.selectionStart = this.selectionEnd = pos + 1;
+        return;
+      }
+      const result = transliterate(word);
+      this.value = val.slice(0, wordStart) + result + ' ' + val.slice(pos);
+      this.selectionStart = this.selectionEnd = wordStart + result.length + 1;
+    });
+
+    function copyOutput() {
+      const text = autocomplete ? input.value : output.innerText;
+      if (!text) return;
+      navigator.clipboard.writeText(text).then(function () {
+        copyBtn.textContent = 'Copied!';
+        setTimeout(function () { copyBtn.textContent = 'Copy'; }, 1500);
+      });
+    }
+  </script>
 </body>
 </html>
