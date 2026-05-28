@@ -32,6 +32,68 @@ Lipi is my attempt to make typing Gujarati feel as natural as typing English.
 ## Controls
 See [CONTROLS.md](CONTROLS.md) for the full mapping reference.
 
+--- 
+# ગુજરાતી અનુવાદ
+
+Lipi એ એક ગુજરાતી ફોનેટિક સિસ્ટમ છે જે English ટેક્સ્ટને ગુજરાતીમાં ફેરવે છે. Basically, તમે English અવાજ પ્રમાણે ટાઇપ કરો અને તે તેને ગુજરાતીમાં બદલી દે છે।
+
+## Screenshot
+
+Lipi ની વેબસાઇટ:
+https://lipi.up.railway.app
+
+![Lipi screenshot](docs/screenshot.png)
+
+## Why Lipi
+
+મેં Lipi બનાવ્યું કારણ કે મને મારા પરિવાર સાથે ગુજરાતી માં વધુ ઝડપથી મેસેજ કરવો હતો। સામાન્ય ગુજરાતી કીબોર્ડ બહુ frustrating લાગતો હતો — અક્ષરો શોધવા પડતા, layouts બદલવા પડતા અને વચ્ચે વિચાર તૂટી જતો। આ friction ટાળવા માટે હું English માં લખતો હતો।
+
+પછી મને Chinese માટે વપરાતી Pinyin phonetic input system વિશે ખબર પડી। તમે Roman letters માં શબ્દ જેમ બોલાય તેમ લખો અને સિસ્ટમ આપમેળે યોગ્ય characters બનાવી આપે છે। મને સમજાયું નહીં કે આવું કંઈ ગુજરાતી — અથવા બીજી Indic scripts — માટે કેમ નથી।
+
+આ વિચારથી “Lipi” બનાવવાનો વિચાર આવ્યો। પછી મેં નામ શોધવાનું શરૂ કર્યું અને અંતે *lipi* (લિપિ) શબ્દ યોગ્ય લાગ્યો — જેનો અર્થ ગુજરાતી માં *script* થાય છે।
+
+Lipi મારું એવું પ્રયત્ન છે કે ગુજરાતી ટાઇપ કરવું English જેટલું સરળ અને natural લાગે।
+
+## Lipi's Website
+
+https://lipi.up.railway.app
+
+## Controls
+
+પૂર્ણ mapping reference માટે [CONTROLS.md](CONTROLS.md) જુઓ。
+
+---
+
+# हिन्दी अनुवाद
+
+Lipi एक गुजराती phonetic system है जो English टेक्स्ट को गुजराती में बदलता है। Basically, आप English sounds के अनुसार टाइप करते हैं और यह उसे गुजराती में बदल देता है।
+
+## Screenshot
+
+Lipi की वेबसाइट:
+https://lipi.up.railway.app
+
+![Lipi screenshot](docs/screenshot.png)
+
+## Why Lipi
+
+मैंने Lipi इसलिए बनाया क्योंकि मैं अपने परिवार को गुजराती में जल्दी और आसानी से मैसेज करना चाहता था। सामान्य गुजराती कीबोर्ड इस्तेमाल करना काफी frustrating था — अक्षर ढूँढने पड़ते थे, बार-बार layouts बदलने पड़ते थे और बीच में सोच का flow टूट जाता था। इसलिए मैं इस परेशानी से बचने के लिए English में लिखता था।
+
+फिर मुझे Chinese भाषा की Pinyin phonetic input system के बारे में पता चला। आप Roman letters में शब्द की आवाज़ के अनुसार टाइप करते हैं और सिस्टम अपने-आप सही characters बना देता है। मुझे समझ नहीं आया कि गुजराती — या बाकी Indic scripts — के लिए ऐसा कुछ क्यों नहीं है।
+
+इसी सोच से “Lipi” बनाने का विचार आया। बाद में नाम खोजते-खोजते मुझे *lipi* (लिपि) शब्द सही लगा, जिसका अर्थ होता है *script*।
+
+Lipi मेरा प्रयास है कि गुजराती टाइप करना उतना ही आसान और natural लगे जितना English टाइप करना।
+
+## Lipi's Website
+
+https://lipi.up.railway.app
+
+## Controls
+
+पूरी mapping reference के लिए [CONTROLS.md](CONTROLS.md) देखें।
+---
+
 ## Quick Example
 | Type           | Gujarati |
 |----------------|----------|
