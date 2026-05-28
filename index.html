@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lipi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Lipi</h1>
+  <p class="subtitle">Type phonetic English, get Gujarati script instantly.</p>
+  <div class="toolbar">
+    <button class="toggle-btn" id="toggle-btn">Autocomplete: off</button>
+  </div>
+  <label for="input">Type here</label>
+  <textarea id="input" placeholder="e.g. k`em chh`o"></textarea>
+  <label id="output-label" style="margin-top:1.5rem;">Gujarati</label>
+  <div id="output"></div>
+  <button class="copy-btn" id="copy-btn" onclick="copyOutput()">Copy</button>
+  <nav>
+    <a href="controls.html">Controls reference →</a>
+  </nav>
+
+  <script src="main.js"></script>
+</body>
+</html>
